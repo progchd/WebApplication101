@@ -32,7 +32,7 @@ jobs:
     # IMPORTANT: Change 'MyWebApiProject' to match your actual API folder name!
     - name: Build and Push Docker Image
       run: |
-        docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/webapi:${{ github.sha }} -f ./MyWebApiProject/Dockerfile .
+        docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/webapi:${{ github.sha }} -f ./WebApplication1/Dockerfile .
         docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/webapi:${{ github.sha }}
 
     # 5. Tells your Azure Web App to deploy the new container image
