@@ -39,5 +39,5 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v3
       with:
-        app-name: 'your-azure-web-app-name' # Replace with your exact Azure Web App Name
+        app-name: 'devprogonapp' # Replace with your exact Azure Web App Name
         images: '${{ secrets.REGISTRY_LOGIN_SERVER }}/webapi:${{ github.sha }}'
